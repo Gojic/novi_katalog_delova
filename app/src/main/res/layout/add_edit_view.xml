@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/slika"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="15dp"
+        android:src="@drawable/id_placeholder"/>
+
+    <LinearLayout
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <EditText
+            app:backgroundTint="@color/colorPrimary"
+            android:id="@+id/imedela_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Koji deo?" />
+
+        <EditText
+            app:backgroundTint="@color/colorPrimary"
+            android:id="@+id/cena_dela_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="cena"
+            android:inputType="number" />
+
+        <EditText
+            app:backgroundTint="@color/colorPrimary"
+            android:id="@+id/komentar_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Komentar" />
+
+
+    </LinearLayout>
+    <Button
+        android:background="@drawable/ripple_effect"
+        android:text="sacuvaj"
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

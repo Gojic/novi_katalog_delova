@@ -1,0 +1,58 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "c0167f9aa8575365476d15744448a64a",
+    "entities": [
+      {
+        "tableName": "deo_db",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`imeDela` TEXT, `cenaDela` INTEGER NOT NULL, `putanjaSlike` TEXT, `komentar` TEXT, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "imeDela",
+            "columnName": "imeDela",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cenaDela",
+            "columnName": "cenaDela",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "putanjaSlike",
+            "columnName": "putanjaSlike",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "komentar",
+            "columnName": "komentar",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'c0167f9aa8575365476d15744448a64a')"
+    ]
+  }
+}
